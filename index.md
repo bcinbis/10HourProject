@@ -1,9 +1,9 @@
-#This is my 10 hour coding project.
+# This is my 10 hour coding project.
 
-#Work Timeline
+# Work Timeline
 
-#Screenshots
+# Screenshots
 
-#SourceCode
+# SourceCode
 
 
