@@ -1,0 +1,135 @@
+class Checker {
+  int x;
+  int y;
+  int w = 100;
+  int h = 100;
+  int mX;
+  int mY;
+  boolean promote = false;
+  boolean jumpPossible = false;
+  boolean dead = false;
+  boolean isPlayer1 = true;
+  
+  boolean isSelected = false;
+  boolean canClick = false;
+  boolean canMove = false;
+  
+  
+  //Constructor
+  
+  Checker(int x, int y, int w, int h, boolean isPlayer1) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.isPlayer1 = isPlayer1;
+  }
+  
+  /*
+  Checker isP1() {
+    isPlayer1 = true;
+  }
+  
+  Checker isP2() {
+    isPlayer1 = false;
+  }
+  */
+  
+  //Sets up a 8x8 grid for your mouse
+  
+  void grid() {
+    for(int i = 0; i<=800; i+=100) {
+      if(i-100 < mouseX && i > mouseX) {
+          mX = i/100;
+      }
+      if(i-100 < mouseY && i > mouseY) {
+          mY = i/100;
+      }
+    }
+  }
+  
+  //Draws checker pieces
+  
+  void display() {
+    noStroke();
+    if(isPlayer1 == true) {
+      fill(255);
+      if(mX == x && mY == y) {
+        fill(255, 100);
+      } 
+    }  else {
+      fill(0, 0, 255);
+      if(mX == x && mY == y) {
+        fill(0, 0, 255, 100);
+      } 
+    }
+    ellipse(x*100 -50, y*100 -50, w, h);
+  }
+  
+  
+  //Conditions for selecting a piece
+  void hover() {
+    if(mX ==x && mY ==y) {
+      canClick = true;
+    }
+    //println(canClick);          //test 1
+  }
+   
+  //Conditions for moving a piece 
+  void conditions() {
+    if(isPlayer1 == true) {
+      if(mX == x+1 || mX == x-1 && mY == y-1) {
+        canMove = true;
+      } else {
+        canMove = false;
+      }
+    } else if(isPlayer1 == false) {
+        if(mX == x+1 || mX == x-1 && mY == y+1) {
+        canMove = true;
+      } else {
+        canMove = false;
+      }
+    }
+    if(canMove == true) {       //test for canMove
+      println(1);
+    } else {
+      println(0);
+    }
+  }
+  
+  //Allows you to select pieces
+  void select() { 
+    if(canClick == true) {
+      if(mousePressed == true) {
+        isSelected = true;   
+        if(mousePressed == true && canClick == false) {
+          isSelected = false;
+        }
+      } 
+    } else if(canClick == false) {
+        isSelected = false;
+    }
+    
+    if(isSelected==true) {
+      println(420);             //test 2, IT WORKS
+    }
+  }
+  
+  //Allows you to move pieces... still working on this
+  void move() {
+    if(isSelected == true) {
+      if(canMove == true) {
+        if(mousePressed == true) {
+          x = mX;
+          y = mY;
+        }
+      }
+    }
+  }
+  
+  //Allows you to jump
+  void jump() { 
+  }
+  
+
+}
