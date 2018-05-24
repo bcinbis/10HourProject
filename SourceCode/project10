@@ -1,0 +1,88 @@
+//ArrayList<Checker>player1 = new ArrayList<Checker>(12);
+//ArrayList<Checker>player2 = new ArrayList<Checker>(12);
+Checker[] player1 = new Checker[12];
+Checker[] player2 = new Checker[12];
+
+void setup() {
+  size(800, 800);
+  //for(int i = 0; i<4; i++) {
+  //player1.get(i) = new Checker(1, , 100, 100).isP1();
+  player1[0] = new Checker(1, 6, 100, 100, true);
+  player1[1] = new Checker(3, 6, 100, 100, true);
+  player1[2] = new Checker(5, 6, 100, 100, true);
+  player1[3] = new Checker(7, 6, 100, 100, true);
+  player1[4] = new Checker(2, 7, 100, 100, true);
+  player1[5] = new Checker(4, 7, 100, 100, true);
+  player1[6] = new Checker(6, 7, 100, 100, true);
+  player1[7] = new Checker(8, 7, 100, 100, true);
+  player1[8] = new Checker(1, 8, 100, 100, true);
+  player1[9] = new Checker(3, 8, 100, 100, true);
+  player1[10] = new Checker(5, 8, 100, 100, true);
+  player1[11] = new Checker(7, 8, 100, 100, true);
+  
+  player2[0] = new Checker(2, 1, 100, 100, false);
+  player2[1] = new Checker(4, 1, 100, 100, false);
+  player2[2] = new Checker(6, 1, 100, 100, false);
+  player2[3] = new Checker(8, 1, 100, 100, false);
+  player2[4] = new Checker(1, 2, 100, 100, false);
+  player2[5] = new Checker(3, 2, 100, 100, false);
+  player2[6] = new Checker(5, 2, 100, 100, false);
+  player2[7] = new Checker(7, 2, 100, 100, false);
+  player2[8] = new Checker(2, 3, 100, 100, false);
+  player2[9] = new Checker(4, 3, 100, 100, false);
+  player2[10] = new Checker(6, 3, 100, 100, false);
+  player2[11] = new Checker(8, 3, 100, 100, false);
+  
+}
+
+
+
+void draw() {
+  background(0, 0, 0);
+  board();
+  for (int i = 0; i<player1.length; i++) {
+    player1[i].display();
+    player1[i].grid();
+    player1[i].select();
+    player1[i].hover();
+    player1[i].conditions();
+    player1[i].move();
+  }
+  
+  for (int i = 0; i<player1.length; i++) {
+    player2[i].display();
+    player2[i].grid();
+    player2[i].select();
+    player2[i].hover();
+    player2[i].conditions();
+    player2[i].move();
+  }
+}
+
+void mouseReleased() {
+  for(int i=0; i<player1.length; i++) {
+    
+  }
+  
+  for(int i=0; i<player2.length; i++) {
+    
+  }
+}
+
+void board() {
+  for(int i = 0; i<7; i++) {
+    noStroke();
+    fill(255, 0, 0);
+    rect(0, i*200, 100, 100);
+    rect(200, i*200, 100, 100);
+    rect(400, i*200, 100, 100);
+    rect(600, i*200, 100, 100);
+    rect(800, i*200, 100, 100);
+    rect(100, 100 + i*200, 100, 100);
+    rect(300, 100 + i*200, 100, 100);
+    rect(500, 100 + i*200, 100, 100);
+    rect(700, 100 + i*200, 100, 100);
+    //I feel like there was a better way to do this...  I'll clean up the code later
+    //It still looks way more complex though.
+  }
+}
