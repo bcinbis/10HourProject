@@ -24,4 +24,4 @@ This is a basic game of checkers developed on the Java mode of Processing.
 
 ## SourceCode
 
-[Source Code](https://github.com/bcinbis/10HourProject/SourceCode)
+[Source Code](https://github.com/bcinbis/10HourProject/tree/master/SourceCode)
