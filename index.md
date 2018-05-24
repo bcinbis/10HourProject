@@ -10,11 +10,7 @@ This is a basic game of checkers developed on the Java mode of Processing.
 
 ## Work Timeline
 
--------May 20--------------May 21-------------------May 23----------------
-         v                    v                        v
-|Basic planing, with  |Beginning coding,  |Finished coding, with logic for | 
-|UML and brainstorming|with board layout  |movement and a very complicated |
-|                     |and constructor    |mess of testing.                |
+![alt text](https://bcinbis.github.io/10HourProject/Images/timeline.png)
 
 ## Screenshots
 
