@@ -6,7 +6,7 @@
 
 ## Description
 
-This is a basic game of checkers developed on the Java mode of Processing.
+This is a basic game of checkers developed on the Java mode of Processing.  Invludes innovative design features such as a mouse hover effect.  Wooooow!
 
 ## Work Timeline
 
@@ -16,9 +16,11 @@ As you can probably see, there is a huge gap between when this project was assig
 
 ## Screenshots
 
+Board setup:
+
 ![alt text](https://bcinbis.github.io/10HourProject/Images/Setup.png)
 
-
+Mid-game-ish:
 
 ![alt text](https://bcinbis.github.io/10HourProject/Images/progress.png)
 
