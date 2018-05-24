@@ -6,7 +6,7 @@
 
 ## Description;
 
-This is a basic game of checkers developed on the Java mode of Processing.  Invludes innovative design features such as a mouse hover effect.  Wooooow!
+This is a basic game of checkers developed on the Java mode of Processing.  Includes innovative design features such as a mouse hover effect.  Wooooow!
 
 ## Work Timeline;
 
